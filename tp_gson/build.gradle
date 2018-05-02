@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.1"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+
+        encoding "utf-8"
+
+    }
+
+}
+
+publish {
+    repoName = 'tp_gson'
+    userOrg = 'gbtp'//bintray.com用户名
+    groupId = "gb.tp.gson"//jcenter上的路径
+    artifactId = 'tp_gson'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'gson update version'
+    website = 'https://github.com/httpping/tp_gson'
+}
+
+tasks.withType(JavaCompile){
+    options.encoding = "UTF-8"
+}
+tasks.withType(Javadoc) {
+    options.encoding = "UTF-8"
+}
+
+dependencies {
+    compileOnly 'com.google.code.gson:gson:2.8.2'
+}
