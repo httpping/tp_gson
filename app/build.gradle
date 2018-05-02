@@ -29,6 +29,6 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
 
     implementation  'com.google.code.gson:gson:2.8.2'
-    implementation project(path: ':tp_gson')
-//    implementation 'gb.tp.gson:tp_gson:1.0.0'
+//    implementation project(path: ':tp_gson')
+    implementation 'gb.tp.gson:tp_gson:2.0.0'
 }

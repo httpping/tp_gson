@@ -25,13 +25,14 @@ android {
     }
 
 }
+//gradlew clean build bintrayUpload -PbintrayUser=httpping -PbintrayKey=363bcd47dd3557230d01c1fb525c0a02e3ae8b92 -PdryRun=false
 
 publish {
     repoName = 'tp_gson'
     userOrg = 'gbtp'//bintray.com用户名
     groupId = "gb.tp.gson"//jcenter上的路径
     artifactId = 'tp_gson'//项目名称
-    publishVersion = '1.0.0'//版本号
+    publishVersion = '2.0.0'//版本号
     desc = 'gson update version'
     website = 'https://github.com/httpping/tp_gson'
 }
